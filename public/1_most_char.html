@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        // input: "aabbbcccc"
+        // output: "c"
+
+        const mostChar = (e) => {
+            let charDict = {}
+            let maxCount = 0
+            let maxChar = ''
+            for (i of e.toLowerCase()) {
+                if (i == " ") continue
+                charDict[i] = (charDict[i] || 0) + 1
+                if (maxCount < charDict[i]) {
+                    maxCount = charDict[i]
+                    maxChar = i
+                }
+            }
+            return maxChar
+        }
+
+        console.log(mostChar("aB  bCcc"))
+    </script>
+</body>
+
+</html>
