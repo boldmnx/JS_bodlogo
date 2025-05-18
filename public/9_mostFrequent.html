@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        // input: [1, 2, 2, 3, 3, 3, 4, 5]
+        // output: 3  // учир нь 3 гэдэг тоо 3 удаа давтагдсан
+
+        function most_frequent(arr) {
+            let dictArr = {}
+            let maxCount = -Infinity
+            let mostItem = null
+            for (let i of arr) {
+                dictArr[i] = (dictArr[i] || 0) + 1
+                if (dictArr[i] > maxCount) {
+                    maxCount = dictArr[i]
+                    mostItem = i
+                }
+            }
+            return mostItem
+        }
+        console.log(most_frequent([1, 2, 2, 7, 7, 7, 4, 5]))
+    </script>
+</body>
+
+</html>

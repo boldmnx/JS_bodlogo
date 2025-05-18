@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [2, 4, 6, 8, 10];
+        // console.log(numbers.reduce((s, e) => s += e))
+        // Хариу: 30
+        //-------------------------------------------------
+
+        let fruits = ["apple", "banana", "cherry", "date"];
+        // console.log(fruits.pop())
+        // console.log(fruits)
+        // Сүүлийн элемент: date
+        // Үлдсэн массив: ["apple", "banana", "cherry"]
+        //-------------------------------------------------
+
+        // let arr = [10, 20, 30, 40, 50];
+        // arr.splice(2, 2, 100, 200)
+        // console.log(arr)
+        // splice ашиглаж: 2-р индексаас 2 элемент устгаж, оронд нь 100, 200 нэмэх
+        // үр дүн: [10, 20, 100, 200, 50]
+        //---------------------------------------------
+
+        // let arr = ["a", "b", "c", "d", "e", "f"];
+
+        // console.log(arr.slice(1, 4))
+        // slice ашиглан: 1-ээс 4 хүртэлх элементийг авах
+        // үр дүн: ["b", "c", "d"]
+        //--------------------------------------------
+
+        let animals = ["dog", "cat", "rabbit", "cat", "mouse"];
+
+        // console.log(animals.indexOf("cat"))
+        // indexOf ашиглаж: "cat" анх гарч ирсэн индексийг ол
+        // үр дүн: 1
+        //--------------------------------------------
+
+        // let word = prompt("stop гэж оруулна уу!")
+        // while (word !== "stop") {
+        //     word = prompt("stop гэж оруулна уу!")
+        // }
+        //--------------------------------------
+
+        let arr = []
+        for (i = 0; i < 2; i++) {
+            arr.push(Math.floor(Math.random() * 10))
+        }
+        arr.forEach(e => {
+            let minToo = Math.min(...arr)
+            let h2 = document.createElement('h2')
+            h2.innerHTML = e
+            if (e === minToo) {
+                h2.style.color = 'red'
+            }
+            document.body.appendChild(h2)
+
+        })
+    </script>
+</body>
+
+</html>

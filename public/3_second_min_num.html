@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Infinity = маш том тоо (хамгийн ихтэй адил)
+        // -Infinity = маш бага тоо (хамгийн багатай адил)
+        function second_min_num(...arr) {
+            let min = Infinity;
+            let secondNum = Infinity;
+
+            for (n of arr) {
+                if (min > n) {
+                    secondNum = min; // өмнөх хамгийн бага нь одоо 2-р бага
+                    min = n; // шинэ хамгийн бага олдсон
+                } else if (n > min && n < secondNum) {
+                    secondNum = n; // min-аас том боловч secondNum-аас бага бол шинэчлэх
+                }
+            }
+            return secondNum;
+        }
+
+        console.log(second_min_num(2, 1, 3, 4, 56, 43, 1, -1, -4))
+    </script>
+</body>
+
+</html>

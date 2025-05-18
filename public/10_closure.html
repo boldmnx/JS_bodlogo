@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Доорх функц доторх console.log юу гэж хэвлэгдэх вэ?
+        function createFunctions() {
+            const result = [];
+
+            for (let i = 0; i < 3; i++) {
+                result.push(function () {
+                    console.log(i);
+                });
+            }
+            return result;
+        }
+
+        const funcs = createFunctions();
+
+        funcs[0]();
+        funcs[1]();
+        funcs[2]();
+    </script>
+</body>
+
+</html>

@@ -5,23 +5,32 @@
     <script>
         // 1️⃣ Spread оператор (...)
         // const arr1 = [1, 2, 3];
-        // const arr2 = [...arr1, 4, 5];  // [1, 2, 3, 4, 5]
-
+        // const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
 
         // 2️⃣ Rest параметр (...)
         // Функцийн параметрүүдийг массив болгон авахад ашиглагддаг.
 
-        // input: [1, 3, 5, 7, 7, 9, 9]
-        // output: 7
 
         // input: [10, 10, 9, 8, 7]
         // output: 9
 
-        function second_largest(...n) {
-            return n
+        function second_largest(...arr) {
+            let max = -Infinity
+            let secondMax = -Infinity
+            for (let n of arr) {
+                if (n > max) {
+                    secondMax = max
+                    max = n
+                    console.log(n)
+                } else if (max > n && secondMax < n) {
+                    secondMax = n
+                    console.log(n)
+                }
+            }
+            return secondMax
         }
 
-        console.log(second_largest([1, 3, 5, 5, 7]))
+        console.log("#" + second_largest(11, 22, 1, 3, 6, 43, 21, 433, 45, 45, 5, 5, 7))
     </script>
 </body>
 

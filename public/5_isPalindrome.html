@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // input: "madam"
+        // output: true
+
+        // input: "racecar"
+        // output: true
+
+        // input: "hello"
+        // output: false
+
+        function isPalendrome(str) {
+            let clean = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+            let cleanStr = clean.toLowerCase()
+            let reversed = cleanStr.split('').reverse().join('');
+            return cleanStr === reversed
+        }
+        let orolt = "       A man, a plan, a Canal, ,,Panama"
+        console.log(isPalendrome(orolt))
+    </script>
+</body>
+
+</html>

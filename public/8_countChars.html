@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        const s = "hello worldH,. 09^%$#^&"
+        // output: { h:1, e:1, l:3, o:2, w:1, r:1, d:1 }
+
+        function count_Chars(str) {
+
+            let dictStr = {}
+
+            for (let i of str.toLowerCase()) {
+                if (/[a-z]/.test(i)) {
+                    dictStr[i] = (dictStr[i] || 0) + 1
+                }
+            }
+            return dictStr
+        }
+        console.log(count_Chars(s))
+    </script>
+</body>
+
+</html>

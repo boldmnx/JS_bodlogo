@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // input: "hello world"
+        // output: "Hello World"
+
+        // input: "javAScript IS fUn"
+        // output: "Javascript Is Fun"
+
+
+        const capitalizeWords = str =>
+            str.toLowerCase().split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+
+        console.log(capitalizeWords("javAScript IS fUn"))
+    </script>
+</body>
+
+</html>

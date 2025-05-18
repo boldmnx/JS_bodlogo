@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const n = parseInt(prompt("1-7 хооронд тоо оруулна уу!"))
+
+        const Days = {
+            MONDAY: 1,
+            TUESDAY: 2,
+            WEDNESDAY: 3,
+            THURSDAY: 4,
+            FRIDAY: 5,
+            SATURDAY: 6,
+            SUNDAY: 7
+        };
+        switch (n) {
+            case Days.MONDAY:
+            case Days.TUESDAY:
+            case Days.WEDNESDAY:
+            case Days.THURSDAY:
+            case Days.FRIDAY:
+                console.log("Ажлын өдөр");
+                break;
+            case Days.SATURDAY:
+            case Days.SUNDAY:
+                console.log("Амралтын өдөр");
+                break;
+            default:
+                console.log("Буруу өдөр");
+        }
+    </script>
+</body>
+
+</html>

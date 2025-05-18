@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let numbers = [1, 2, 2, 3, 4, 4, 5]
+        // output: [1, 2, 3, 4, 5]
+
+        let useguud = ["a", "b", "a", "c", "b"]
+        // output: ["a", "b", "c"]
+
+        function remove_dublicates(arr) {
+            return [...new Set(arr)]
+
+            // newArr = []
+            // arr.forEach(e => {
+            //     if (!newArr.includes(e)) {
+            //         newArr.push(e)
+            //     }
+            // })
+            // return newArr
+        }
+        console.log(remove_dublicates(useguud))
+    </script>
+</body>
+
+</html>
